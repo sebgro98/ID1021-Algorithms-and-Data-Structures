@@ -35,8 +35,6 @@ public class ALinkedQueue {
             tail = tail.next;
         }
     }
-
-
     public Integer remove() {
         Integer returnValue;
         if (head == null) {
@@ -47,23 +45,6 @@ public class ALinkedQueue {
         return returnValue;
     }
 
-    void enqueue(int key) {
-
-        // Create a new LL node
-        Node temp = new Node(key);
-
-        // If queue is empty, then new node is front and
-        // rear both
-        if (this.tail == null) {
-            this.head = this.head = temp;
-            return;
-        }
-
-        // Add the new node at the end of queue and change
-        // rear
-        this.head.next = temp;
-        this.head = temp;
-    }
 
     public void printForward() {
         if (head == null) {
